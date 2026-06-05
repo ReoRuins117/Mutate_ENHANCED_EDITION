@@ -1,0 +1,17 @@
+[project]
+name = "mutate"
+version = "0.1.0"
+description = "Pygame microevolutionary ecosystem simulator"
+requires-python = ">=3.8"
+dependencies = [
+    "pygame>=2.5.0",
+    "numpy>=1.24.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mutate*"]
+
+[project.scripts]
+mutate-headless = "mutate.main:main"
+mutate-pygame = "mutate.main_pygame:main"
