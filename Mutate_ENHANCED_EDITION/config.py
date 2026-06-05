@@ -1,0 +1,17 @@
+# config.py
+
+FRAME_RATE = 60
+BRAIN_INTERVAL = 3
+
+WORLD_WIDTH = 100
+WORLD_HEIGHT = 100
+
+INITIAL_CREATURES = 100
+INITIAL_PLANTS = 300
+
+TERRAIN_DEFAULT = "grass"
+
+# --- Pygame / rendering ---
+WINDOW_WIDTH = 800
+WINDOW_HEIGHT = 800
+TILE_SIZE = 8  # pixels per world tile
