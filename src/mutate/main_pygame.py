@@ -1,30 +1,31 @@
 # main_pygame.py
+
 import pygame
 import time
 import random
 
-from mutate.config import (
+from config import (
     FRAME_RATE, BRAIN_INTERVAL,
     WORLD_WIDTH, WORLD_HEIGHT,
     INITIAL_CREATURES, INITIAL_PLANTS,
     TERRAIN_DEFAULT, WINDOW_WIDTH, WINDOW_HEIGHT
 )
 
-from mutate.core.world import World
-from mutate.core.environment import Environment
-from mutate.core.logging_system import Logger
-from mutate.core.simulation import Simulation
-from mutate.core.terrain import TerrainTile
-from mutate.plants.plant_instance import Plant
-from mutate.plants.plant_types import PlantType
-from mutate.creatures.species_template import SpeciesTemplate
-from mutate.creatures.genome import (
+from core.world import World
+from core.environment import Environment
+from core.logging_system import Logger
+from core.simulation import Simulation
+from core.terrain import TerrainTile
+from plants.plant_instance import Plant
+from plants.plant_types import PlantType
+from creatures.species_template import SpeciesTemplate
+from creatures.genome import (
     Genome, BasicStats, SensoryStats, BrainParams,
     ImmuneStats, DigestiveParams, DamageParams,
     ColorProfile, SoundProfile
 )
 
-from mutate.ui.render import Renderer
+from ui.render import Renderer
 
 
 def build_test_species():
@@ -117,6 +118,7 @@ def build_terrain(width, height):
             ))
         grid.append(col)
     return grid
+
 
 def main():
     pygame.init()
